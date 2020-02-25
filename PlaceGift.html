@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="Script1.js"></script>
+
+    <link rel="stylesheet" href="StyleSheet1.css">
+
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        fieldset {
+            width: 400px;
+            float: "center";
+        }
+
+        form {
+            text-align: center;
+        }
+
+        .bg {
+            background-image: url('images/back.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        div.scroll {
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body class="bg" onload="focus()">
+    <header>
+        <!--Logo Transparent-->
+        <div>
+            <marquee direction="rtl">
+                <img src="images\card.png" class="rounded-circle" alt="Not" style="width: 100px; height: 100px;">
+            </marquee>
+            <p style="text-align:center">When you get a gift card, you tend to think of it as free money, and you splurge a little bit.</p>
+        </div>
+
+        <!--Nav-bar-->
+        <nav class="navbar navbar-expand-lg navbar-light  bg-dark">
+
+            <div class="col" id="navbarText">
+                <ul class="nav row nav-pills ">
+
+                    <li class="col-sm-3 nav-item text-center">
+                        <a class="nav-link btn-outline-warning" href="Index.html">Home </a>
+                    </li>
+                    <li class="col-sm-3 nav-item text-center">
+                        <a class="nav-link btn-outline-warning" href="PlaceGift.html">Place gift card Orders</a>
+                    </li>
+                    <li class="col-sm-3 nav-item text-center">
+                        <a class="nav-link btn-outline-warning" href="ViewGift.html">View Gift Card Orders</a>
+                    </li>
+                    <li class="col-sm-3 nav-item text-center">
+                        <a class="nav-link btn-outline-warning" href="ContactUs.html">Contact us</a>
+                    </li>
+
+                </ul>
+                <!-- <span class="navbar-text">
+                  Navbar text with an inline element
+                </span> -->
+            </div>
+
+        </nav>
+    </header>
+    <!--Side bar-->
+    <section>
+        <div class="row">
+            <aside class="col-3">
+
+                <ul class="nav flex-column">
+                    <li class="nav-item my-2 text-center">
+                        <a href="Index.html" class="nav-link btn-primary">Home</a>
+                    </li>
+                    <li class="nav-item my-2 text-center">
+                        <a href="PlaceGift.html" class="nav-link btn-primary">Place Gift Card Orders</a>
+                    </li>
+                    <li class="nav-item my-2 text-center">
+                        <a href="ViewGift.html" class="nav-link btn-primary">View Gift Card Orders</a>
+                    </li>
+                    <li class="nav-item my-2 text-center">
+                        <a href="ContactUs.html" class="nav-link btn-primary">Contact Us</a>
+                    </li>
+                </ul>
+
+            </aside>
+            <div class="col scroll text-center">
+
+                <div class="content">
+
+                    <h2 class="do" style="color:blue"> place gift card order page:</h2>
+
+                    <form onsubmit="save()" method="get">
+                        <table>
+                            <tr>
+                                <th>GiftCardAmount:</th>
+                                <td><input type="number" size="2" id="t1" min="1" required>: <input type="number" size="2" min=0 max=99 maxlength="2" id="t2" required></td>
+
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <th>
+                                    INR &nbsp;&nbsp;
+                                    PAISA
+                                </th>
+                            </tr>
+                            <tr>
+
+                                <th>  Receipent Home:</th>
+                                <td><input type="text" size="10" pattern="[A-Za-z\\s]*" id="t3" required></td>&nbsp; &nbsp; &nbsp;
+                                <td><input type="text" size="10" pattern="[A-Za-z\\s]*" id="t4" required></td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <th>FirstName </th>
+                                <th>LastName</th>
+                            </tr>
+                        </table><br /><br />
+                        <fieldset class="border 6  border-dark">
+                            <legend class="w-auto"><b>Shipping Address:</b></legend>
+                            <table>
+                                <tr>
+                                    <td><input type="text" id="t5" size="30" required></td>
+                                </tr>
+                                <tr>
+                                    <th text-align="center"> Steet Address</th>
+                                <tr>
+                                    <td><input type="text" size="10" id="t6" required></td>&nbsp&nbsp
+                                    <td><input type="text" size="10" id="t7" required></td>
+                                </tr>
+                                <tr>
+                                    <th> City</th>
+                                    <th>State</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select id="t8" required>
+                                            <option value=" "> </option>
+                                            <option value="INDIA">India</option>
+                                            <option value="USA">USA</option>
+                                            <option value="UK">UK</option>
+                                            <option value="china">China</option>
+                                        </select>&nbsp&nbsp
+                                    </td>
+                                    <td><input type="text" size="10" maxlength="6" id="pin" pattern="[0-9]*" required></td>
+
+                                </tr>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Pincode</th>
+                                </tr>
+                            </table>
+                        </fieldset>
+                        <table float="left">
+                            <tr>
+                                <th>Buyers Name:</th>
+                                <td> <input type="text" size="20" id="t9" pattern="[A-Za-z\\s]*" required></td> &nbsp; &nbsp;
+                                <td><input type="text" size="20" id="t10" pattern="[A-Za-z\\s]*" required></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <th>FirstName</th>
+                                <th>LastName</th>
+                            </tr>
+                        </table>
+                        <table float="left">
+                            <tr>
+                                <th> Phone Number:</th>
+                                <td>
+                                    <input type="text" size="2" value="+91" readonly="readonly" id="t11" />&nbsp-
+                                    <input type="text" size="1" maxlength="1" onkeyup="movetoNext(this, 't13')" requirpattern="[6-9]{1}" id="t12" required />
+                                    <input type="text" size="1" maxlength="1" onkeyup="movetoNext(this, 't14')" requirpattern="[0-9]{1}" id="t13" required />&nbsp;
+                                    <input type="text" size="1" maxlength="1" onkeyup="movetoNext(this, 't15')" requirpattern="[0-9]{1}" id="t14" required />&nbsp
+                                    <input type="text" size="1" maxlength="1" onkeyup="movetoNext(this, 't16')" requirpattern="[0-9]{1}" id="t15" required />&nbsp
+                                    <input type="text" size="1" maxlength="1" onkeyup="movetoNext(this, 't17')" requirpattern="[0-9]{1}" id="t16" required />&nbsp
+                                    <input type="text" size="1" maxlength="1" onkeyup="movetoNext(this, 't18')" requirpattern="[0-9]{1}" id="t17" required />&nbsp
+                                    <input type="text" size="1" maxlength="1" onkeyup="movetoNext(this, 't19')" requirpattern="[0-9]{1}" id="t18" required />&nbsp
+
+                                    <input type="text" size="1" maxlength="1" onkeyup="movetoNext(this, 't20')" requirpattern="[0-9]{1}" id="t19" required />&nbsp
+                                    <input type="text" size="1" maxlength="1" onkeyup="movetoNext(this, 't21')" requirpattern="[0-9]{1}" id="t20" required />&nbsp
+                                    <input type="text" size="1" maxlength="1" requirpattern="[0-9]{1}" id="t21" required />&nbsp
+                                </td>
+                            </tr>
+
+                        </table><br>
+                        <table float="left">
+                            <tr>
+                                <th>Email :</th>
+                                <td><input type="email" size="25" id="23" required /></td>
+                            </tr>
+                        </table>
+
+                        <br />
+                        <div class="text-left">
+                            <button type="submit" class="btn btn-success" value="Place Order">Place Order</button>
+                        </div>
+                        <div>
+                            <a class="btn btn-success" href="ViewGift.html">VIew</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+</html>
